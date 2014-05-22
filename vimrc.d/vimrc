@@ -31,3 +31,4 @@ endif
 let g:NERDTreeDirArrows=0
 
 set backspace=2
+let showmarks_enable=0
