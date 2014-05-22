@@ -163,10 +163,10 @@ map <S-F>o :foldopen<CR>
 
 vmap <S-F>c zf
 
-" This one does a push to industrial for someone else to pull down
-vmap <F1> :w !ssh industrial 'cat > /tmp/tmp && chmod 777 /tmp/tmp'<CR><CR>
-" This one does a pull from industrial
-vmap <F2> :!ssh industrial 'cat /tmp/tmp'<CR>
+" This one does a push to mons for someone else to pull down
+vmap <F1> :w !ssh mons 'cat > /tmp/tmp && chmod 777 /tmp/tmp'<CR><CR>
+" This one does a pull from mons
+vmap <F2> :!ssh mons 'cat /tmp/tmp'<CR>
 
 vmap <Tab> :g/^/norm I<TAB><CR>:noh<CR>gv
 vmap <S-Tab> :s/^\(    \\|\s\)//g<CR>:noh<CR>gv
@@ -185,8 +185,8 @@ vmap <S-H> 5h
 vmap <S-W>c :w !wc -w<CR>
 map <S-W>c :w !wc -w<CR>
 
-" Write-push. Save a file to Industrial
-map <S-N>wp :call WritePush("industrial")<CR>
+" Write-push. Save a file to Mons
+map <S-N>wp :call WritePush("mons")<CR>
 map zp yyp:.s/begin/end/<CR>
 map z' 0i\{}<ESC>hi
 
