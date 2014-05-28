@@ -119,8 +119,6 @@ map <S-C>c :<UP><CR>
 " used for running macros
 
 map <S-C>j @
-noremap q :call SwapKeys()<CR>q
-noremap q: q:
 
 " Highlight a section and run this to replace
 " all occurences
@@ -193,7 +191,7 @@ map z' 0i\{}<ESC>hi
 " Write as superuser! The most useful function ever!
 " No longer need to have that aw crap moment when ypu
 " realize you're editing as a normal user
-map <S-N>wsu :w! /tmp/vimtmp<CR>:!sh -c 'sudo cp /tmp/vimtmp %:p'<CR>L
+map <S-N>wsu :w! /tmp/vimtmp<CR>:!sh -c 'sudo cp /tmp/vimtmp %:p && rm -f /tmp/vimtmp'<CR>l
 
 " mapping for easy use with errormarker.vim
 map <leader><leader>c :ErrorAtCursor<CR>
